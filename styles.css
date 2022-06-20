@@ -106,6 +106,7 @@ form>.terms {
 }
 
 input[required]:focus:invalid{
+    color: hsla(0, 93%, 73%, 0.767);
     outline: none;
     border: 2px solid hsla(0, 93%, 73%, 0.767);
     background:white url(icon-error.svg) right no-repeat;
