@@ -145,11 +145,7 @@ label{
 }
 @media screen and (max-width:700px){
     body{
-<<<<<<< HEAD
         background-image: url(/bg-intro-mobile.png)no-repeat contain;
-=======
-        background-image: url(bg-intro-mobile.png);
->>>>>>> 1d0a3e18e3a16e4b2a9f2a9f4f17ba55e824358d
         background-color:hsl(0, 100%, 74%);
         color: white;
         text-align: center;
