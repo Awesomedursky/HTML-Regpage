@@ -73,9 +73,6 @@ input {
 label{
     display: none;
 }
-
-
-
 button {
     background-color: hsl(154, 59%, 51%);
     padding: 15px;
