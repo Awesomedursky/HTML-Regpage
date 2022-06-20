@@ -115,7 +115,7 @@ input[required]:focus:invalid{
 input:not(:placeholder-shown):focus + label {
     display: none;
 }
-input[type="email"]:focus:invalid::placeholder{
+input:focus:invalid::placeholder{
     color: hsla(0, 93%, 73%, 0.767);
 }
 input[type="email"]:focus:invalid{
@@ -202,16 +202,6 @@ label{
         border-radius: 5px;
         padding:20px;
         font-weight: 700;
-    }
-    input[required]:invalid {
-        border: 2px solid hsla(0, 93%, 73%, 0.767);
-        background: white url(icon-error.svg) right no-repeat;
-        background-origin: content-box;
-        color: hsl(0, 0%, 42%);
-        }
-    
-    input[type="email"]::placeholder {
-        color: hsla(0, 93%, 73%, 0.795);
     }
     button{
         background-color:hsl(154, 59%, 51%);
