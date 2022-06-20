@@ -71,9 +71,13 @@ input {
     font-weight: 600;
     font-size: 15px;
 }
-input:not(:placeholder-shown) + label{
+label{
     display: none;
 }
+input:focus + label{
+    display: block;
+}
+
 
 button {
     background-color: hsl(154, 59%, 51%);
@@ -103,20 +107,29 @@ form>.terms {
     color: hsl(0, 100%, 74%);
     font-weight: 600;
 }
-input:focus{
+
+input[required]:focus:invalid{
     outline: none;
-    border: 1px solid hsl(240, 6%, 28%);
-    
-}
-input[required]:invalid{
     border: 2px solid hsla(0, 93%, 73%, 0.767);
     background:white url(/icon-error.svg) right no-repeat;
-    background-origin: content-box; 
-    color: hsl(0, 0%, 42%);
+    background-origin: content-box;
 }
-input[type="email"]::placeholder{
-    color:hsla(0, 93%, 73%, 0.795);
+input:not(:placeholder-shown):focus + label {
+    display: none;
 }
+input[type="email"]:focus:invalid::placeholder{
+    color: hsla(0, 93%, 73%, 0.767);
+}
+input[type="email"]:focus:invalid{
+    border: 2px solid hsla(0, 93%, 73%, 0.767);
+    background: white url(/icon-error.svg) right no-repeat;
+    background-origin: content-box;
+
+}
+input[type="email"]:focus:valid{
+    background: none;
+}
+
 label{
     color: hsla(0, 93%, 73%, 0.795);
     font-weight: 600;
@@ -131,7 +144,7 @@ label{
 
 @media screen and (max-width:700px){
     body{
-        background-image: url(/bg-intro-mobile.png);
+        background-image: url(/bg-intro-mobile.png)no-repeat contain;
         background-color:hsl(0, 100%, 74%);
         color: white;
         text-align: center;
